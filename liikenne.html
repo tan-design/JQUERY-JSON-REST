@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>amazing world</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		
+		<!-- CSS -->
+		<link rel="stylesheet" href="css/grt-responsive-menu.css">
+
+	</head>
+	<body>
+        <div id="liikenne"></div>
+
+    <!-- linkki jQueryn pääkirjastoon -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+		<header>
+			<div class="menu-container">
+				<div class="row no-margin">
+					<div class="col-sm-4 col-xs-6 no-padding">
+						<a href="#"  class="grt-logo"><img src="logo1.jpg"></a>
+					</div>
+					<div class="col-sm-8 col-xs-6 no-padding">
+						<nav>
+                            <button class="grt-mobile-button">
+                            <div class="line1"></div>
+                            <div class="line2"></div>
+                            <div class="line3"></div>
+                            </button>
+                            <ul class="grt-menu">
+                                <li class="active"><a href="index.html">etusivu</a></li>
+                                <li><a href="">galleria</a></li>
+                                <li class="grt-dropdown"><a>tampere</a>
+                                    <ul class="grt-dropdown-list">
+                                        <li><a href="matka.html">matka</a></li>
+                                        <li><a href="tapahtumat.html">tapahtumat</a></li>
+                                        <li><a href="saa.html">sää</a></li>
+                                        </ul>
+                                    </li>
+                                <li><a href="liikenne.html">liikenne</a></li>
+                                 <li><a href="kuvat.html">kuvat</a></li>
+                                                                               
+                                
+                            </ul>
+                        </nav>
+					</div>
+				</div>
+			</div>
+		</header>
+        <script>
+        
+        $.getJSON("https://rata.digitraffic.fi/api/v1/live-trains/station/HKI?minutes_before_departure=15&minutes_after_departure=15&minutes_before_arrival=15&minutes_after_arrival=15", function(data) {
+            var items = [];
+
+           
+            
+            var juna = data.juna;
+           
+           
+             $.each(data, function(key, d) {
+                items.push("<h3>Junan numero: " + d.trainNumber + "</h3>" + "<p>Lähtöpäivä: " + d.departureDate + ", Asema: " + d.timeTableRows[0].stationShortCode + ", Tyyppi:  " + d.timeTableRows[0].type +", Aikataulun mukainen lähtöaika:  " + d.timeTableRows[0].scheduledTime + "</p>");
+          });
+  
+
+            $("#liikenne").append(items.join(""));
+ 
+             });
+        </script>
+		
+	</body>
+</html>

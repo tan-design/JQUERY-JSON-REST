@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>amazing world</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- GRT Youtube Plugin CSS -->
+    <link rel="stylesheet" href="css/grt-responsive-menu.css">
+    
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    
+    <link rel="stylesheet" href="css/lightbox.css">
+    
+ 
+        
+</head>
+
+<body>
+    <header>
+        <div class="menu-container">
+            <div class="row no-margin">
+                <div class="col-sm-4 col-xs-6 no-padding">
+                    <a href="#" class="grt-logo"><img src="images/maapallo.jpg" alt="logo"></a>
+                </div>
+                <div class="col-sm-8 col-xs-6 no-padding">
+                    <nav>
+                        <button class="grt-mobile-button">
+                            <div class="line1"></div>
+                            <div class="line2"></div>
+                            <div class="line3"></div>
+                        </button>
+                        <ul class="grt-menu">
+                            <li class="active"><a href="">etusivu</a></li>
+                            <li><a href="">galleria</a></li>
+                            <li><a href="">contact</a></li>
+                            <li><a href="">blog</a></li>
+
+                            <li class="grt-dropdown"><a>JavaScript</a>
+                                <ul class="grt-dropdown-list">
+                                    <li><a href="">AngularJS</a></li>
+                                    <li><a href="">VueJS</a></li>
+                                    <li><a href="">ReactJS</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">More Links</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- slideri & galleria tänne -->
+        <div class="slider">
+        <div><img src="images/kondolihissi kolmården.jpg" height="400" width="100%"></div>
+        <div><img src="images/kirahvit.jpg" height="400" width="100%"></div>
+        <div><img src="images/kilpikonna2.jpg" height="400" width="100%"></div>
+         </div>
+        
+        <div id="galleria">
+        <a href="images/Kuva1.jpg" data-lightbox="roadtrip" ><img class="luola" src="images/Kuva1.JPG" alt=""></a> 
+        <a href="images/Kuva2.jpg" data-lightbox="roadtrip"><img class ="palmu" src="images/Kuva2.jpg"></a>   <a href="images/Kuva3.jpg" data-lightbox="roadtrip"><img class="varpaat" src="images/Kuva3.jpg"></a>   
+        <a href="images/Kuva4.jpg" data-lightbox="roadtrip"><img class="varaani" src="images/Kuva4.jpg"></a> 
+ 
+       
+    </div> 
+   
+ </div> 
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="js/grt-responsive-menu.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script src="js/lightbox.min.js"></script>
+    <script>
+        $(document).ready(function(){ 
+            $('.slider').bxSlider(); 
+        });  
+    </script> 
+
+</body>
+
+</html>
